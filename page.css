@@ -1,0 +1,195 @@
+/* Reset and Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: yellowgreen;
+  margin: 0;
+
+}
+
+
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding:60px;
+  background-color:yellowgreen;
+  font-weight: bold;
+  position: relative;
+}
+
+nav ul {
+  display: flex;
+  
+}
+
+nav ul li {
+  list-style: none;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #1d1d24;
+  position: relative;
+  padding: 5px 0;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: #fd4766;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #fd4766;
+  transition: width 0.3s ease-in-out;
+  bottom: 0;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+.Main-Logo img{
+  height: 80px;
+  width: 100px;
+  padding-top: -40px;
+
+  
+}
+
+/* Download Button */
+.btn {
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all 0.4s ease-in-out;
+  height: 35px;
+  width: 200px;
+}
+
+.btn:hover {
+  background: red;
+  color: white;
+}
+
+.btn .logoD {
+  height: 15px;
+  margin-right: 20px;
+  margin-left: 10px;
+}
+
+.btntext {
+  display: inline-block;
+}
+
+/* Content Section */
+.content {
+  padding: 5px 80px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.content h1 {
+  font-size: 80px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.with {
+  font-style: italic;
+  color: black;
+}
+
+.big {
+  color: rgb(0, 4, 128);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Slogan Description */
+.content p {
+  font-size: 18px;
+  margin-top: 20px;
+  max-width: 600px;
+}
+
+/* Tracking Section */
+.tracking-section {
+  margin-top: 110px;
+  display: flex;
+  justify-content: center;
+}
+
+.tracking-section input {
+  padding: 30px;
+  width: 600px;
+  height: 50px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  align-items: center;
+  font-weight: 600;
+}
+
+.tracking-section button {
+  padding: 5px;
+  background-color: rgb(232, 237, 238);
+  color: black;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  font-weight: 600;
+}
+
+.tracking-section button:hover {
+  background-color: rgb(206, 213, 216);
+}
+
+/* Van Image */
+.van img {
+  max-width: 600px;
+  width: 100%;
+  display: block;
+  margin-top: -44%;
+  margin-left: 55%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .content {
+      padding: 50px 20px;
+      text-align: center;
+  }
+
+  .tracking-section {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .tracking-section input,
+  .tracking-section button {
+      width: 100%;
+  }
+}
